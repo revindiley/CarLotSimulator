@@ -19,6 +19,8 @@ namespace CarLotSimulator
             //Set the properties for each of the cars
             //Call each of the methods for each car
 
+            CarLot carLot = new CarLot();
+
             Car devinsCar = new Car();
             devinsCar.Make = "Ford";
             devinsCar.Year = 2017;
@@ -26,6 +28,8 @@ namespace CarLotSimulator
             devinsCar.EngineNoise = "VROOOOOOOOM";
             devinsCar.HonkNoise = "beep";
             devinsCar.IsDriveable= true;
+            devinsCar.MakeEngineNoise($"Devin's Car sounds like: {devinsCar.EngineNoise}");
+            Console.WriteLine($"The amount of cars in the lot: {CarLot.numberOfCars}");
 
             var samsCar = new Car()
             {
@@ -36,6 +40,8 @@ namespace CarLotSimulator
                 HonkNoise = "eep eep",
                 IsDriveable= true, 
             };
+            samsCar.MakeEngineNoise($"Sam's Car sounds like: {samsCar.EngineNoise}");
+            Console.WriteLine($"The amount of cars in the lot: {CarLot.numberOfCars}");
 
             var momsCar = new Car()
             {
@@ -46,10 +52,12 @@ namespace CarLotSimulator
                 HonkNoise = "boop boop", 
                 IsDriveable= true,
             };
-
-            devinsCar.MakeEngineNoise($"Devin's Car sounds like: {devinsCar.EngineNoise}");
-            samsCar.MakeEngineNoise($"Sam's Car sounds like: {samsCar.EngineNoise}");
             momsCar.MakeEngineNoise($"Mom's Car sounds like: {momsCar.EngineNoise}");
+            Console.WriteLine($"The amount of cars in the lot: {CarLot.numberOfCars}");
+
+            //devinsCar.MakeEngineNoise($"Devin's Car sounds like: {devinsCar.EngineNoise}");
+            //samsCar.MakeEngineNoise($"Sam's Car sounds like: {samsCar.EngineNoise}");
+            //momsCar.MakeEngineNoise($"Mom's Car sounds like: {momsCar.EngineNoise}");
             //*************BONUS*************//
 
             // Set the properties utilizing the 3 different ways we learned about, one way for each car
@@ -60,6 +68,9 @@ namespace CarLotSimulator
             //It should have at least one property: a List of cars
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
+
+
+            //Console.WriteLine($"The amount of cars in the lot: {CarLot.numberOfCars}");
         }
     }
 }
